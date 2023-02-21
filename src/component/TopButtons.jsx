@@ -8,7 +8,7 @@ const TopButtons = () => {
     },
     {
       id: 2,
-      title: "laore",
+      title: "lahore",
     },
     {
       id: 3,
@@ -17,7 +17,11 @@ const TopButtons = () => {
   ];
   return (
     <div className="flex items-center justify-around my-6">
-      {cities.map((city) => city.title)}
+      {cities.map((city) => (
+        <button className="text-white" key={city.id}>
+          {city.title}
+        </button>
+      ))}
     </div>
   );
 };
